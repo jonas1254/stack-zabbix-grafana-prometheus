@@ -10,10 +10,10 @@ services:
     volumes:
       - BD_mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=suasenha
+      - MYSQL_ROOT_PASSWORD=docker
       - MYSQL_DATABASE=zabbix
       - MYSQL_USER=zabbix
-      - MYSQL_PASSWORD=suasenha
+      - MYSQL_PASSWORD=docker
   
   zabbix-server:
     container_name: zabbix-server
@@ -46,7 +46,7 @@ services:
       - DB_SERVER_HOST=mysql
       - MYSQL_DATABASE=zabbix
       - MYSQL_USER=zabbix
-      - MYSQL_PASSWORD=suasenha
+      - MYSQL_PASSWORD=docker
       - PHP_TZ=America/Sao_Paulo
     depends_on:
       - mysql
